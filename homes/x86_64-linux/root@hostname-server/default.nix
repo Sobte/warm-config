@@ -1,6 +1,25 @@
+let
+  mkDefaultEnabled = {
+    enable = true;
+  };
+in
 {
   cattery = {
-    room.server.enable = true;
+    cli-apps = {
+      dev-kit = {
+        git = mkDefaultEnabled;
+        nix = mkDefaultEnabled;
+      };
+
+      nix = {
+        home-manager = mkDefaultEnabled;
+        nix-index = mkDefaultEnabled;
+      };
+
+      shell = {
+        zsh = mkDefaultEnabled;
+      };
+    };
   };
 
   snowfallorg.user.enable = false;
