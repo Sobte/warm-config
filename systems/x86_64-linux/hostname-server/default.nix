@@ -12,6 +12,8 @@
     # services.vscode-server.enable = true;
 
     system.boot.kernel.useIpForward = true;
+    system.boot.efi.enable = false;
+    system.boot.grub.enable = true;
   };
 
   # close firewall
