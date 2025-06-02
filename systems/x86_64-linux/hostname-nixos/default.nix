@@ -4,6 +4,11 @@
   # path: /etc/nixos/hardware-configuration.nix
   # imports = [ ./hardware.nix ];
 
+  fileSystems."/" = {
+    device = "/dev/sda1";
+    fsType = "ext4";
+  };
+
   cattery = {
     room.desktop.dev.enable = true;
 
