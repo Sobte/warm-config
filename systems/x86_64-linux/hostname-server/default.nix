@@ -13,8 +13,9 @@
 
     system.boot.kernel.useIpForward = true;
     system.boot.efi.enable = false;
-    system.boot.grub.enable = true;
   };
+
+  boot.loader.grub.device = "/dev/sda";
 
   # close firewall
   # networking.firewall.enable = false;
